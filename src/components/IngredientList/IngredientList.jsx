@@ -1,12 +1,9 @@
-import { useState } from "react";
-import App from "../../App";
-
 
 const IngredientList = (props) => {
 
 const addItem =(item)=>{
 props.addIngredient(item);
-console.log('item',item)
+
 }
   return (
    <ul>

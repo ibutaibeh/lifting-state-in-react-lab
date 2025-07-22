@@ -27,14 +27,18 @@ const App = () => {
      setChosenIngredient([...chosenIngredient,ingredient])
     
   }
+const removeIngredient =(ingredient)=>{
 
+setChosenIngredient(chosenIngredient.filter((x,id)=>id!== chosenIngredient.indexOf(ingredient)))
+
+}
 
   return (
     <main>
       <h1>Burger Stacker</h1>
       <section>
         <IngredientList ingredientList={availableIngredients} addIngredient={addIngredient} />
-        <BurgerStack />
+        <BurgerStack chosenIngredient={chosenIngredient} removeIngredient={removeIngredient}/>
       </section>
     </main>
   );
